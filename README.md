@@ -7,8 +7,8 @@ The other stack should start out empty, and it's going to be used to
 store our operands as we pop them off the postfix expression stack
 looking for an operator.  So your stacks look like:
 
-
-.       TOP OF STACK             BOTTOM
+<pre>
+       TOP OF STACK             BOTTOM
           v                       v
 Postfix: [A, B, C, *, +, D, E, -, /]
 Operand: []
@@ -20,7 +20,7 @@ Postfix: [C, *, +, D, E, -, /]
 Operand: [B, A]
 
 
-.        next value = operator
+        next value = operator
           v
 Postfix: [*, +, D, E, -, /]
 Operand: [C, B, A]
@@ -35,7 +35,7 @@ Operand: [A]  -> LD B, MUL C, ST TEMP1
 Postfix: [+, D, E, -, /]
 Operand: [TEMP1, A]
 
-.        next value = operator
+       next value = operator
           v
 Postfix: [+, D, E, -, /]
 Operand: [TEMP1, A]
@@ -45,7 +45,7 @@ Postfix: [+, D, E, -, /] -> current operator +
 Operand: []  -> LD A, AD TEMP1, ST TEMP2
 //Store the temp back on the stack
 
-.        next value = operand
+        next value = operand
           v
 Postfix: [D, E, -, /]
 Operand: [TEMP2]
@@ -54,7 +54,7 @@ Operand: [TEMP2]
 Postfix: [E, -, /]
 Operand: [D, TEMP2]
 
-.        next value = operator
+        next value = operator
           v
 Postfix: [-, /]
 Operand: [E, D, TEMP2]
@@ -72,3 +72,5 @@ Postfix: []
 Operand: [TEMP3, TEMP2] -> LD TEMP2, DV TEMP3, ST TEMP4
 
 //postfix is empty so we're done!
+
+</pre>
