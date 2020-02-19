@@ -1,0 +1,35 @@
+
+
+
+
+//load the entire string into a char stack in reverse (start at end, work to front)
+
+//initialize temp var counter (i.e. TEMP1, TEMP2, "TEMP" + count)
+
+//LOOP
+//pop off the stack and store into a operand stack until you get to an operator
+    //pop off the operator
+    //get the previous two values from the operand stack
+    //load the first value (LD)
+    //apply operand to second value
+    //store result back into the operand stack as "TEMP" + count
+    //increment counter
+    //peek at next in stack
+        //if operator
+            //get an operand off the stack
+            //load the operand
+            //apply the operator to the stored value
+
+        //if operand, continue LOOP
+
+
+
+A
+LD B
+ML C
+ADD A
+
+LD D
+SU E
+
+DIV
