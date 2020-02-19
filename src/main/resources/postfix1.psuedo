@@ -1,0 +1,27 @@
+
+
+
+
+//load the entire string into a char stack in reverse (start at end, work to front)
+// so for a problem like 
+//       ABC*+DE-/
+// your stack looks like
+//              TOP OF STACK             BOTTOM
+//                   v                       v
+//         Postfix: [A, B, C, *, +, D, E, -, /]
+
+//initialize temp var counter (i.e. TEMP1, TEMP2, "TEMP" + count)
+//initialize empty operand stack
+
+//LOOP
+    //pop off the postfix stack  
+    //if operand
+        //push operand in operand stack
+        //continue LOOP
+    //else if operator
+        //pop off the operator
+        //pop off two values from the operand stack
+        //load the second value you popped off (LD)
+        //apply operand to first value you popped off
+        //push result back into the operand stack as "TEMP" + count
+        //increment temp counter
