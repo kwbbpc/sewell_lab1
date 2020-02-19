@@ -1,4 +1,24 @@
 
+
+#Running the program
+
+This project can be run straight from the command line using:
+
+`java -cp . com.lab1.Main postfix1.prob`
+
+- the -cp provides the classpath which here is shown as ".", meaning current directory.
+
+- java will need the full name of your main aplication to run it (which is the package name).
+Packages are represented as the directory heirarchy... i.e. com.lab1.Main = com/lab1/Main.class
+
+- The argument provided after the main class is the filename to load.  This file must be located on the
+classpath of your application (it has to be on the filepath specified by -cp above.
+
+This command is meant to be run from the compiled code's build directory (the directory all of your class files get shoved to.).  This directory
+will have all of your resource files (postfix1.*) in the top level.
+
+
+#The problem.
 ABC*+DE-/
 
 You need two stacks for this problem.
